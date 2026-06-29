@@ -1,11 +1,17 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
 import { allSlugs } from "@/lib/tools";
+import { allPostSlugs } from "@/lib/blog";
 import { locales } from "@/i18n/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const paths = ["", ...allSlugs().map((s) => `/${s}`)];
+  const paths = [
+    "",
+    ...allSlugs().map((s) => `/${s}`),
+    "/blog",
+    ...allPostSlugs().map((s) => `/blog/${s}`),
+  ];
 
   return paths.flatMap((path) =>
     locales.map((locale) => ({

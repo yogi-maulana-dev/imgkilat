@@ -31,6 +31,12 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               {t!.navLabel}
             </Link>
           ))}
+          <Link
+            href={`/${locale}/blog`}
+            className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          >
+            {dict.blog.nav}
+          </Link>
         </div>
         <div className="flex items-center gap-1">
           <LanguageSwitcher locale={locale} />

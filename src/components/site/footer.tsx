@@ -18,6 +18,12 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div>
           <p className="text-lg font-extrabold">{siteConfig.name}</p>
           <p className="mt-2 max-w-xs text-sm text-muted-foreground">{dict.site.description}</p>
+          <Link
+            href={`/${locale}/blog`}
+            className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
+          >
+            {dict.blog.nav}
+          </Link>
         </div>
         {groupSlugs.map((g) => (
           <div key={g.key}>

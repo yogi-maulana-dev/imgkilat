@@ -48,9 +48,7 @@ export function ToolApp({
   const [byPercent, setByPercent] = useState(false);
   const [percent, setPercent] = useState(100);
 
-  const [compressMode, setCompressMode] = useState<"quality" | "target">(
-    preset.targetKB ? "target" : "quality",
-  );
+  const [compressMode, setCompressMode] = useState<"quality" | "target">("target");
   const [quality, setQuality] = useState(80);
   const [targetKB, setTargetKB] = useState(preset.targetKB ? String(preset.targetKB) : "100");
 
@@ -77,6 +75,11 @@ export function ToolApp({
     if (!preset.to) {
       const detected = f.type.split("/")[1]?.replace("jpg", "jpeg");
       if (detected === "jpeg" || detected === "png" || detected === "webp") setFormat(detected);
+    }
+    // Compress: prefill the target-size field with the original size (KB) so the
+    // user can simply edit it down (e.g. 900 KB → 200 KB).
+    if (type === "compress" && !preset.targetKB) {
+      setTargetKB(String(Math.max(1, Math.round(f.size / 1024))));
     }
     const url = URL.createObjectURL(f);
     setPreview(url);
@@ -255,6 +258,9 @@ export function ToolApp({
               <div>
                 <Label>{dict.targetSize}</Label>
                 <Input type="number" value={targetKB} onChange={(e) => setTargetKB(e.target.value)} className="mt-1.5" />
+                <p className="mt-1.5 text-xs text-muted-foreground">
+                  {dict.original}: {formatBytes(file.size)}
+                </p>
               </div>
             )}
           </>

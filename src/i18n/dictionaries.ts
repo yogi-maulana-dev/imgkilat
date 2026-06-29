@@ -18,6 +18,7 @@ const en = {
     dropHint: "Drop an image above to resize it instantly — or pick a dedicated tool below.",
     gridTitle: "Every image tool you need",
     gridSubtitle: "Free, fast and private. No installs, no signup, no watermarks.",
+    useCases: "Popular uses & guides",
     faqs: [
       {
         q: "Are these image tools really free?",
@@ -39,6 +40,15 @@ const en = {
   },
   faq: { title: "Frequently Asked Questions" },
   related: { title: "Related tools" },
+  blog: {
+    nav: "Blog",
+    title: "Blog & Guides",
+    subtitle: "Tips and how-tos for resizing, compressing and preparing photos.",
+    readMore: "Read article",
+    published: "Published",
+    mentioned: "Tools mentioned",
+    back: "All articles",
+  },
   breadcrumb: { home: "Home" },
   footer: {
     note: "All images are processed securely and never stored.",
@@ -60,6 +70,7 @@ const en = {
     height: "Height",
     quality: "Quality",
     targetSize: "Target size (KB)",
+    original: "Original",
     outputFormat: "Output format",
     process: "Process Image",
     processing: "Processing…",
@@ -107,6 +118,7 @@ const id: Dictionary = {
     dropHint: "Letakkan gambar di atas untuk langsung mengubah ukurannya — atau pilih alat khusus di bawah.",
     gridTitle: "Semua alat gambar yang Anda butuhkan",
     gridSubtitle: "Gratis, cepat, dan privat. Tanpa instalasi, tanpa daftar, tanpa watermark.",
+    useCases: "Kebutuhan populer & panduan",
     faqs: [
       {
         q: "Apakah alat gambar ini benar-benar gratis?",
@@ -128,6 +140,15 @@ const id: Dictionary = {
   },
   faq: { title: "Pertanyaan yang Sering Diajukan" },
   related: { title: "Alat terkait" },
+  blog: {
+    nav: "Berita",
+    title: "Blog & Panduan",
+    subtitle: "Tips dan cara mengubah ukuran, mengompres, dan menyiapkan foto.",
+    readMore: "Baca artikel",
+    published: "Diterbitkan",
+    mentioned: "Alat terkait",
+    back: "Semua artikel",
+  },
   breadcrumb: { home: "Beranda" },
   footer: {
     note: "Semua gambar diproses dengan aman dan tidak pernah disimpan.",
@@ -149,6 +170,7 @@ const id: Dictionary = {
     height: "Tinggi",
     quality: "Kualitas",
     targetSize: "Ukuran target (KB)",
+    original: "Asli",
     outputFormat: "Format hasil",
     process: "Proses Gambar",
     processing: "Memproses…",
