@@ -5,12 +5,17 @@ import { getTools } from "@/lib/tools";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { LanguageSwitcher } from "./language-switcher";
+import { MobileNav } from "./mobile-nav";
 
 const primaryNav = ["resize-image", "compress-image", "convert-image", "crop-image", "bulk-image-resizer"];
 
 export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const all = getTools(locale);
   const links = primaryNav.map((s) => all.find((t) => t.slug === s)).filter(Boolean);
+  const mobileItems = [
+    ...links.map((t) => ({ href: `/${locale}/${t!.slug}`, label: t!.navLabel })),
+    { href: `/${locale}/blog`, label: dict.blog.nav },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
@@ -42,10 +47,11 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <LanguageSwitcher locale={locale} />
           <Link
             href={`/${locale}/resize-image`}
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
+            className="hidden rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90 sm:inline-block"
           >
             {dict.nav.getStarted}
           </Link>
+          <MobileNav items={mobileItems} />
         </div>
       </nav>
     </header>
