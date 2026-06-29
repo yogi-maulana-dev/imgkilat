@@ -1,0 +1,21 @@
+// Optional. Only used when DATABASE_URL is set.
+// Run: npx prisma migrate dev  (or)  npx prisma db push
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Usage {
+  id        String   @id @default(cuid())
+  tool      String
+  bytesIn   Int
+  bytesOut  Int
+  createdAt DateTime @default(now())
+
+  @@index([tool])
+  @@index([createdAt])
+}

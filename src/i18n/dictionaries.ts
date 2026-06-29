@@ -1,0 +1,183 @@
+import type { Locale } from "./config";
+
+const en = {
+  site: {
+    tagline: "Resize, Compress & Convert Images Online",
+    description:
+      "Free online image tools to resize, compress, convert and crop your JPG, PNG and WebP images. Fast, private and processed securely — no signup required.",
+  },
+  nav: { getStarted: "Get Started" },
+  hero: {
+    badge: "Free · No signup · No watermark",
+    titleA: "Resize, Compress and Convert",
+    titleB: "Images Online",
+    pointStored: "Files never stored",
+    pointFast: "Processed in seconds",
+  },
+  home: {
+    dropHint: "Drop an image above to resize it instantly — or pick a dedicated tool below.",
+    gridTitle: "Every image tool you need",
+    gridSubtitle: "Free, fast and private. No installs, no signup, no watermarks.",
+    faqs: [
+      {
+        q: "Are these image tools really free?",
+        a: "Yes. Every tool is free to use with no signup, no watermark and no daily limit for normal use.",
+      },
+      {
+        q: "Do you store my images?",
+        a: "No. Images are processed in an isolated request and discarded immediately afterwards. Nothing is written to disk or shared.",
+      },
+      {
+        q: "What formats are supported?",
+        a: "JPG/JPEG, PNG and WebP for both input and output across resize, compress, convert and crop tools.",
+      },
+      {
+        q: "Is there a file size limit?",
+        a: "Each file can be up to 20 MB, and the bulk tool accepts up to 30 files at once.",
+      },
+    ],
+  },
+  faq: { title: "Frequently Asked Questions" },
+  related: { title: "Related tools" },
+  breadcrumb: { home: "Home" },
+  footer: {
+    note: "All images are processed securely and never stored.",
+    groups: { resize: "Resize & Crop", compress: "Compress", convert: "Convert" },
+  },
+  dropzone: {
+    dropHere: "Drop your image here",
+    dragDrop: "Drag & drop or click to upload",
+    upTo: "Up to {n} files · ",
+    formats: "JPG, PNG, WebP · max {mb} MB",
+    selectImage: "Select Image",
+    selectImages: "Select Images",
+  },
+  tool: {
+    pixels: "Pixels",
+    percentage: "Percentage",
+    scale: "Scale",
+    width: "Width",
+    height: "Height",
+    quality: "Quality",
+    targetSize: "Target size (KB)",
+    outputFormat: "Output format",
+    process: "Process Image",
+    processing: "Processing…",
+    download: "Download",
+    adjust: "Adjust settings",
+    done: "Done! New size:",
+    remove: "Remove image",
+    aspectRatio: "Aspect ratio",
+    free: "Free",
+    crop: "Crop Image",
+    cropping: "Cropping…",
+    cropped: "Cropped",
+    cropAgain: "Crop again",
+    qualityMode: "Quality",
+    targetMode: "Target size",
+    compress: "Compress",
+    resize: "Resize",
+    convert: "Convert",
+    selected: "image(s) selected",
+    clear: "Clear",
+    processN: "Process {n} image(s)",
+    zipReady: "ZIP ready",
+    downloadZip: "Download ZIP",
+    error: "Something went wrong.",
+  },
+};
+
+export type Dictionary = typeof en;
+
+const id: Dictionary = {
+  site: {
+    tagline: "Ubah Ukuran, Kompres & Konversi Gambar Online",
+    description:
+      "Alat gambar online gratis untuk mengubah ukuran, mengompres, mengonversi, dan memotong gambar JPG, PNG, dan WebP. Cepat, privat, dan aman — tanpa perlu daftar.",
+  },
+  nav: { getStarted: "Mulai" },
+  hero: {
+    badge: "Gratis · Tanpa daftar · Tanpa watermark",
+    titleA: "Ubah Ukuran, Kompres & Konversi",
+    titleB: "Gambar Online",
+    pointStored: "File tidak pernah disimpan",
+    pointFast: "Diproses dalam hitungan detik",
+  },
+  home: {
+    dropHint: "Letakkan gambar di atas untuk langsung mengubah ukurannya — atau pilih alat khusus di bawah.",
+    gridTitle: "Semua alat gambar yang Anda butuhkan",
+    gridSubtitle: "Gratis, cepat, dan privat. Tanpa instalasi, tanpa daftar, tanpa watermark.",
+    faqs: [
+      {
+        q: "Apakah alat gambar ini benar-benar gratis?",
+        a: "Ya. Semua alat gratis digunakan tanpa daftar, tanpa watermark, dan tanpa batas harian untuk pemakaian normal.",
+      },
+      {
+        q: "Apakah gambar saya disimpan?",
+        a: "Tidak. Gambar diproses dalam permintaan terisolasi dan langsung dihapus setelahnya. Tidak ada yang ditulis ke disk atau dibagikan.",
+      },
+      {
+        q: "Format apa saja yang didukung?",
+        a: "JPG/JPEG, PNG, dan WebP untuk input maupun output di alat ubah ukuran, kompres, konversi, dan potong.",
+      },
+      {
+        q: "Apakah ada batas ukuran file?",
+        a: "Setiap file maksimal 20 MB, dan alat massal menerima hingga 30 file sekaligus.",
+      },
+    ],
+  },
+  faq: { title: "Pertanyaan yang Sering Diajukan" },
+  related: { title: "Alat terkait" },
+  breadcrumb: { home: "Beranda" },
+  footer: {
+    note: "Semua gambar diproses dengan aman dan tidak pernah disimpan.",
+    groups: { resize: "Ubah Ukuran & Potong", compress: "Kompres", convert: "Konversi" },
+  },
+  dropzone: {
+    dropHere: "Letakkan gambar Anda di sini",
+    dragDrop: "Seret & lepas atau klik untuk mengunggah",
+    upTo: "Hingga {n} file · ",
+    formats: "JPG, PNG, WebP · maks {mb} MB",
+    selectImage: "Pilih Gambar",
+    selectImages: "Pilih Gambar",
+  },
+  tool: {
+    pixels: "Piksel",
+    percentage: "Persen",
+    scale: "Skala",
+    width: "Lebar",
+    height: "Tinggi",
+    quality: "Kualitas",
+    targetSize: "Ukuran target (KB)",
+    outputFormat: "Format hasil",
+    process: "Proses Gambar",
+    processing: "Memproses…",
+    download: "Unduh",
+    adjust: "Ubah pengaturan",
+    done: "Selesai! Ukuran baru:",
+    remove: "Hapus gambar",
+    aspectRatio: "Rasio aspek",
+    free: "Bebas",
+    crop: "Potong Gambar",
+    cropping: "Memotong…",
+    cropped: "Terpotong",
+    cropAgain: "Potong lagi",
+    qualityMode: "Kualitas",
+    targetMode: "Ukuran target",
+    compress: "Kompres",
+    resize: "Ubah Ukuran",
+    convert: "Konversi",
+    selected: "gambar dipilih",
+    clear: "Bersihkan",
+    processN: "Proses {n} gambar",
+    zipReady: "ZIP siap",
+    downloadZip: "Unduh ZIP",
+    error: "Terjadi kesalahan.",
+  },
+};
+
+const dictionaries: Record<Locale, Dictionary> = { en, id };
+
+export function getDictionary(locale: Locale): Dictionary {
+  return dictionaries[locale] ?? en;
+}
