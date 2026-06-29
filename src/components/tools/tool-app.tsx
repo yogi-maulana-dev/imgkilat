@@ -58,7 +58,7 @@ export function ToolApp({
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [result, setResult] = useState<{ url: string; size: number; name: string } | null>(null);
+  const [result, setResult] = useState<{ url: string; size: number; name: string; w: number; h: number } | null>(null);
   const resultUrl = useRef<string>("");
 
   useEffect(() => {
@@ -135,7 +135,14 @@ export function ToolApp({
       const url = URL.createObjectURL(blob);
       resultUrl.current = url;
       const ext = (res.headers.get("Content-Type") ?? "").split("/")[1]?.replace("jpeg", "jpg") ?? "img";
-      setResult({ url, size: blob.size, name: `imgkilat-${type}.${ext}` });
+      // Read the produced dimensions so the result (incl. enlargements) is clearly confirmed.
+      const outDims = await new Promise<{ w: number; h: number }>((resolve) => {
+        const im = new window.Image();
+        im.onload = () => resolve({ w: im.naturalWidth, h: im.naturalHeight });
+        im.onerror = () => resolve({ w: 0, h: 0 });
+        im.src = url;
+      });
+      setResult({ url, size: blob.size, name: `imgkilat-${type}.${ext}`, w: outDims.w, h: outDims.h });
     } catch (e) {
       setError(e instanceof Error ? e.message : dict.error);
     } finally {
@@ -170,12 +177,16 @@ export function ToolApp({
         >
           <X className="h-4 w-4" />
         </button>
-        {preview && (
+        {(result?.url || preview) && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={preview} alt="Preview" className="max-h-[420px] max-w-full rounded-lg object-contain shadow" />
+          <img
+            src={result?.url || preview}
+            alt="Preview"
+            className="max-h-[420px] max-w-full rounded-lg object-contain shadow"
+          />
         )}
         <span className="absolute bottom-3 left-3 rounded-md bg-background/90 px-2 py-1 text-xs text-muted-foreground">
-          {dims.w}×{dims.h}px · {formatBytes(file.size)}
+          {result ? `${result.w}×${result.h}px · ${formatBytes(result.size)}` : `${dims.w}×${dims.h}px · ${formatBytes(file.size)}`}
         </span>
       </div>
 
@@ -274,7 +285,7 @@ export function ToolApp({
         {result ? (
           <div className="space-y-3">
             <div className="rounded-lg bg-green-50 px-3 py-2 text-sm text-green-700">
-              {dict.done} <strong>{formatBytes(result.size)}</strong>{" "}
+              {dict.done} <strong>{result.w}×{result.h}px · {formatBytes(result.size)}</strong>{" "}
               {file.size > result.size && <span>(−{Math.round((1 - result.size / file.size) * 100)}%)</span>}
             </div>
             <Button asChild size="lg" className="w-full">

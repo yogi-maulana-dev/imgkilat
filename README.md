@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ImgKilat — Online Image Tools (iLoveIMG-style)
 
 Production-ready image tools platform built with **Next.js 16 (App Router) + TypeScript + Tailwind v4**, server-side image processing with **Sharp**, and a high-end SEO setup. Resize, compress, convert, crop and bulk-process JPG/PNG/WebP — fast, private, and SEO-optimized.
@@ -107,3 +108,7 @@ The route, metadata, `hreflang`, sitemap entry, and JSON-LD for both locales are
 1. Push to GitHub, import into **Vercel** (zero-config, HTTPS automatic).
 2. Set `NEXT_PUBLIC_SITE_URL` to your domain.
 3. Submit `https://yourdomain/sitemap.xml` in **Google Search Console**.
+=======
+# imgkilat
+Next.js image platform with multilingual support, API proxy, and Prisma integration for fast and scalable image management.
+>>>>>>> 7b7b531665f39655e55a68e5f1e79727ba8d231a
