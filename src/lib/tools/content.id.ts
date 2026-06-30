@@ -14,7 +14,7 @@ export const contentId: Record<string, ToolContent> = {
       {
         heading: "Cara mengubah ukuran gambar",
         body: [
-          "Mengubah ukuran gambar berarti mengganti lebar dan tingginya dalam piksel. Dengan ImgKilat Anda bisa melakukannya langsung di browser — letakkan file ke kotak unggah, ketik lebar atau tinggi baru, lalu unduh hasilnya. Tidak perlu instal aplikasi dan tidak perlu membuat akun.",
+          "Mengubah ukuran gambar berarti mengganti lebar dan tingginya dalam piksel. Dengan ImgWus Anda bisa melakukannya langsung di browser — letakkan file ke kotak unggah, ketik lebar atau tinggi baru, lalu unduh hasilnya. Tidak perlu instal aplikasi dan tidak perlu membuat akun.",
           "- Unggah file JPG, PNG, atau WebP (maksimal 20 MB).",
           "- Masukkan lebar dan tinggi target dalam piksel, atau alihkan ke mode persen untuk menskalakan dengan rasio.",
           "- Biarkan ikon kunci aktif agar rasio aspek asli terjaga sehingga foto tidak gepeng.",
@@ -32,7 +32,7 @@ export const contentId: Record<string, ToolContent> = {
         heading: "Mengapa perlu mengubah ukuran gambar?",
         body: [
           "Gambar berukuran besar adalah penyebab utama halaman web lambat. Foto langsung dari kamera ponsel bisa selebar 4000 piksel dan beberapa megabita — jauh lebih besar daripada yang ditampilkan situs mana pun. Mengubah ukuran ke ukuran tampilan asli sangat mengurangi waktu muat, meningkatkan Core Web Vitals, dan menghemat bandwidth pengunjung.",
-          "Resize juga dibutuhkan untuk banyak keperluan praktis: foto profil dengan dimensi maksimal, listing marketplace, lampiran email dengan batas ukuran, dan cetak pada resolusi tertentu. ImgKilat menangani semuanya tanpa watermark atau batasan.",
+          "Resize juga dibutuhkan untuk banyak keperluan praktis: foto profil dengan dimensi maksimal, listing marketplace, lampiran email dengan batas ukuran, dan cetak pada resolusi tertentu. ImgWus menangani semuanya tanpa watermark atau batasan.",
         ],
       },
       {
@@ -43,7 +43,7 @@ export const contentId: Record<string, ToolContent> = {
       },
     ],
     faqs: [
-      { q: "Apakah alat ubah ukuran gambar ini gratis?", a: "Ya. ImgKilat sepenuhnya gratis tanpa watermark, tanpa daftar, dan tanpa batas pemakaian untuk penggunaan normal." },
+      { q: "Apakah alat ubah ukuran gambar ini gratis?", a: "Ya. ImgWus sepenuhnya gratis tanpa watermark, tanpa daftar, dan tanpa batas pemakaian untuk penggunaan normal." },
       { q: "Apakah resize menurunkan kualitas gambar?", a: "Memperkecil gambar tetap menjaga ketajamannya. Memperbesar melebihi resolusi asli bisa menambah keburaman, yang tidak terhindarkan pada alat mana pun." },
       { q: "Bagaimana cara menjaga rasio aspek?", a: "Biarkan ikon kunci aktif. Saat Anda mengubah lebar, tinggi menyesuaikan otomatis (dan sebaliknya) sehingga foto tidak gepeng." },
       { q: "Format file apa saja yang didukung?", a: "Anda bisa mengubah ukuran gambar JPG/JPEG, PNG, dan WebP, serta mengekspor ke salah satu format tersebut." },
@@ -58,7 +58,7 @@ export const contentId: Record<string, ToolContent> = {
       "Kompres gambar JPG, PNG, dan WebP online untuk memperkecil ukuran file tanpa banyak mengurangi kualitas. Pakai slider kualitas atau tentukan ukuran target. Gratis & cepat.",
     keywords: ["kompres gambar", "perkecil ukuran gambar", "kompres foto", "compress jpg", "perkecil ukuran foto", "kompres png"],
     intro:
-      "Perkecil ukuran file gambar tanpa penurunan kualitas yang terlihat. Gunakan slider kualitas untuk kontrol presisi, atau tentukan ukuran target dan biarkan ImgKilat mencari kualitas terbaik yang muat.",
+      "Perkecil ukuran file gambar tanpa penurunan kualitas yang terlihat. Gunakan slider kualitas untuk kontrol presisi, atau tentukan ukuran target dan biarkan ImgWus mencari kualitas terbaik yang muat.",
     content: [
       {
         heading: "Cara mengompres gambar",
@@ -74,7 +74,7 @@ export const contentId: Record<string, ToolContent> = {
         heading: "Slider kualitas vs ukuran target",
         body: [
           "Slider kualitas memberi kontrol langsung dan dapat diprediksi, cocok saat Anda tahu kira-kira kompromi yang diinginkan. Sebagian besar foto terlihat sangat baik pada kualitas 70–80% sambil menjadi jauh lebih kecil dari ukuran aslinya.",
-          "Mode ukuran target lebih cerdas saat sebuah platform menerapkan batas keras — misalnya formulir unggah yang menolak file di atas 1 MB. ImgKilat menjalankan pencarian biner di berbagai tingkat kualitas agar mendarat tepat di bawah target Anda, jadi Anda otomatis mendapat gambar terbaik pada ukuran tersebut.",
+          "Mode ukuran target lebih cerdas saat sebuah platform menerapkan batas keras — misalnya formulir unggah yang menolak file di atas 1 MB. ImgWus menjalankan pencarian biner di berbagai tingkat kualitas agar mendarat tepat di bawah target Anda, jadi Anda otomatis mendapat gambar terbaik pada ukuran tersebut.",
         ],
       },
       {
@@ -107,12 +107,12 @@ export const contentId: Record<string, ToolContent> = {
       "Perkecil foto apa pun hingga di bawah 100 KB online gratis. Cocok untuk formulir ujian, lamaran kerja, dan unggahan dengan batas 100 KB. Menjaga kualitas terbaik.",
     keywords: ["ubah ukuran gambar ke 100kb", "kompres gambar ke 100kb", "foto di bawah 100kb", "perkecil foto 100kb", "kompres foto 100kb"],
     intro:
-      "Butuh foto di bawah 100 KB untuk formulir online, pendaftaran ujian, atau lamaran kerja? Unggah gambar Anda dan ImgKilat otomatis menemukan kualitas tertinggi yang tetap di bawah 100 KB.",
+      "Butuh foto di bawah 100 KB untuk formulir online, pendaftaran ujian, atau lamaran kerja? Unggah gambar Anda dan ImgWus otomatis menemukan kualitas tertinggi yang tetap di bawah 100 KB.",
     content: [
       {
         heading: "Foto di bawah 100 KB secara instan",
         body: [
-          "Banyak portal pemerintah, formulir ujian universitas, dan situs lamaran kerja menolak foto lebih dari 100 KB. Melakukannya manual itu melelahkan — Anda menebak nilai kualitas, ekspor, cek ukuran, dan ulangi. ImgKilat menghilangkan tebak-tebakan itu.",
+          "Banyak portal pemerintah, formulir ujian universitas, dan situs lamaran kerja menolak foto lebih dari 100 KB. Melakukannya manual itu melelahkan — Anda menebak nilai kualitas, ekspor, cek ukuran, dan ulangi. ImgWus menghilangkan tebak-tebakan itu.",
           "- Unggah foto JPG, PNG, atau WebP Anda.",
           "- Target sudah diatur ke 100 KB.",
           "- Aplikasi melakukan pencarian biner kualitas agar mendarat tepat di bawah batas sambil menjaga gambar setajam mungkin.",
@@ -184,6 +184,56 @@ export const contentId: Record<string, ToolContent> = {
       { q: "Apakah menghapus latar belakang?", a: "Tidak, alat ini mengubah ukuran dan membingkai foto Anda. Gunakan latar polos saat memotret untuk hasil terbaik." },
     ],
   },
+  "pas-foto-cpns": {
+    h1: "Pas Foto CPNS 3×4 (Ganti Background Merah/Biru)",
+    navLabel: "Pas Foto CPNS",
+    metaTitle: "Pas Foto CPNS Online – Ubah 3×4, Background Merah/Biru + Jas",
+    metaDescription:
+      "Buat pas foto CPNS online gratis: ubah ke ukuran 3×4, hapus dan ganti background jadi merah atau biru otomatis, lalu tambah jas/kemeja. Diproses di perangkat, foto tidak diunggah.",
+    keywords: ["pas foto cpns", "foto cpns 3x4", "ganti background foto cpns", "background merah pas foto", "pas foto pakai jas", "pas foto biru"],
+    intro:
+      "Siapkan pas foto untuk pendaftaran CPNS dalam satu alat: ubah ke ukuran 3×4, ganti background otomatis menjadi merah atau biru, dan tambahkan jas atau kemeja. Semua diproses di perangkat Anda — foto tidak diunggah ke mana pun.",
+    content: [
+      {
+        heading: "Cara membuat pas foto CPNS",
+        body: [
+          "Pendaftaran CPNS lewat SSCASN mewajibkan pas foto dengan latar belakang warna tertentu (umumnya merah) dan ukuran yang sesuai. Alat ini menggabungkan semuanya menjadi beberapa langkah mudah.",
+          "- Unggah foto Anda (sebaiknya menghadap depan, pencahayaan merata).",
+          "- Latar belakang dihapus otomatis, lalu pilih warna baru: merah atau biru.",
+          "- Pilih ukuran 3×4 (atau 4×6), atur perbesaran dan posisi wajah.",
+          "- Opsional: tambahkan jas atau kemeja, lalu sesuaikan posisi dan ukurannya.",
+          "- Unduh hasilnya, dan aktifkan opsi ≤ 200 KB bila formulir membatasi ukuran file.",
+        ],
+      },
+      {
+        heading: "Background merah atau biru sesuai ketentuan",
+        body: [
+          "Warna latar pas foto sering ditentukan oleh tahun kelahiran (ganjil/genap) atau ketentuan instansi. Alat ini menghapus latar asli memakai model AI yang berjalan di browser Anda, lalu menggantinya dengan warna merah atau biru yang solid dan rapi — tanpa perlu studio foto.",
+          "Karena pemrosesan terjadi di perangkat, foto Anda tetap privat dan tidak dikirim ke server mana pun.",
+        ],
+      },
+      {
+        heading: "Tambah jas atau kemeja",
+        body: [
+          "Belum sempat berpakaian formal? Tambahkan overlay jas atau kemeja, lalu geser posisi dan ukurannya agar pas di bahu. Fitur ini berupa template (bukan AI generatif), jadi hasilnya rapi dan instan untuk kebutuhan pas foto.",
+          "Tips: bingkai wajah agar bahu terlihat sedikit di bagian bawah supaya jas/kemeja tampak natural.",
+        ],
+      },
+      {
+        heading: "Ukuran dan file siap unggah",
+        body: [
+          "Ukuran 3×4 setara 354×472 piksel pada 300 DPI — cukup tajam untuk dicetak maupun diunggah. Jika portal membatasi ukuran file (mis. 200 KB), aktifkan opsi kompres agar hasil otomatis muat tanpa Anda perlu mengompres lagi secara terpisah.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Apakah background otomatis terhapus?", a: "Ya. Latar belakang dihapus otomatis oleh model AI yang berjalan di browser Anda, lalu diganti warna merah atau biru. Foto tidak diunggah ke server." },
+      { q: "Ukuran 3×4 berapa piksel?", a: "3×4 cm pada 300 DPI setara 354×472 piksel. Tersedia juga preset 4×6 (472×709 px)." },
+      { q: "Apakah fitur jas memakai AI?", a: "Jas/kemeja berupa template overlay yang bisa Anda atur posisinya — bukan AI generatif — sehingga gratis, cepat, dan tetap di perangkat." },
+      { q: "Bagaimana agar file di bawah 200 KB?", a: "Aktifkan opsi kompres saat mengunduh; hasilnya otomatis dijaga di bawah 200 KB untuk memenuhi batas unggah." },
+      { q: "Apakah gratis?", a: "Ya, sepenuhnya gratis tanpa watermark dan tanpa daftar." },
+    ],
+  },
   "jpg-to-png": {
     h1: "Konversi JPG ke PNG",
     navLabel: "JPG ke PNG",
@@ -197,7 +247,7 @@ export const contentId: Record<string, ToolContent> = {
       {
         heading: "Cara mengonversi JPG ke PNG",
         body: [
-          "Unggah file JPG Anda dan ImgKilat mengenkode ulang menjadi PNG dengan kompresi lossless, lalu memberikan unduhannya. Seluruh proses berjalan di sisi server dalam satu permintaan tanpa menyimpan apa pun setelahnya.",
+          "Unggah file JPG Anda dan ImgWus mengenkode ulang menjadi PNG dengan kompresi lossless, lalu memberikan unduhannya. Seluruh proses berjalan di sisi server dalam satu permintaan tanpa menyimpan apa pun setelahnya.",
           "- Letakkan gambar JPG atau JPEG ke kotak unggah.",
           "- Format hasil dikunci ke PNG.",
           "- Unduh PNG hasil konversi segera.",
@@ -414,7 +464,7 @@ export const contentId: Record<string, ToolContent> = {
       {
         heading: "Satu konverter, segala arah",
         body: [
-          "ImgKilat mengonversi antara tiga format yang penting untuk web modern. Entah Anda butuh WebP lebih kecil untuk performa, PNG lossless untuk pengeditan, atau JPG kompatibel universal untuk berbagi, semuanya hanya sejauh satu dropdown.",
+          "ImgWus mengonversi antara tiga format yang penting untuk web modern. Entah Anda butuh WebP lebih kecil untuk performa, PNG lossless untuk pengeditan, atau JPG kompatibel universal untuk berbagi, semuanya hanya sejauh satu dropdown.",
           "- Unggah JPG, PNG, atau WebP apa pun.",
           "- Pilih format hasil dan kualitas.",
           "- Unduh secara instan — tanpa akun, tanpa watermark.",
@@ -448,7 +498,7 @@ export const contentId: Record<string, ToolContent> = {
       {
         heading: "Cara memotong gambar",
         body: [
-          "Memotong menghilangkan bagian foto yang tidak diinginkan dan mengubah bingkai atau rasio aspeknya. Dengan ImgKilat Anda cukup menyeret kotak di atas area yang ingin dipertahankan.",
+          "Memotong menghilangkan bagian foto yang tidak diinginkan dan mengubah bingkai atau rasio aspeknya. Dengan ImgWus Anda cukup menyeret kotak di atas area yang ingin dipertahankan.",
           "- Unggah gambar JPG, PNG, atau WebP.",
           "- Seret sudut kotak potong, atau pilih rasio (bebas, 1:1, 4:3, 16:9).",
           "- Lihat pratinjau pilihan dan unduh gambar yang terpotong.",

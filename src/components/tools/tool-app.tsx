@@ -21,7 +21,7 @@ export interface ToolPreset {
   lockFormat?: boolean;
 }
 
-const endpoint: Record<Exclude<ToolType, "crop" | "bulk">, string> = {
+const endpoint: Record<Exclude<ToolType, "crop" | "bulk" | "cpns">, string> = {
   resize: "/api/resize",
   compress: "/api/compress",
   convert: "/api/convert",

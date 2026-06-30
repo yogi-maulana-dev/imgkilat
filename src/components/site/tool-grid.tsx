@@ -6,11 +6,11 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { ToolIcon } from "./icon";
 
 const featured = [
+  "pas-foto-cpns",
   "resize-image",
   "compress-image",
   "convert-image",
   "crop-image",
-  "jpg-to-png",
   "png-to-webp",
   "resize-image-to-100kb",
   "passport-photo-resizer",

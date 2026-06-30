@@ -65,22 +65,40 @@ export async function compressImage(input: Buffer, opts: CompressOptions) {
   const meta = await sharp(input).metadata();
   const format = opts.format ?? (meta.format as OutputFormat) ?? "jpeg";
 
-  // Target-size mode: binary search the quality that fits under targetBytes.
+  // Target-size mode.
   if (opts.targetBytes) {
-    let lo = 10;
-    let hi = 95;
-    let best = await encode(sharp(input).rotate(), format, hi).toBuffer();
-    for (let i = 0; i < 7; i++) {
-      const mid = Math.round((lo + hi) / 2);
-      const out = await encode(sharp(input).rotate(), format, mid).toBuffer();
-      if (out.byteLength > opts.targetBytes) {
-        hi = mid - 1;
-      } else {
-        best = out;
-        lo = mid + 1;
+    const target = opts.targetBytes;
+
+    // 1) Quality search at full resolution.
+    const smallest = await encode(sharp(input).rotate(), format, 10).toBuffer();
+    if (smallest.byteLength <= target) {
+      let best = smallest;
+      let lo = 10;
+      let hi = 95;
+      for (let i = 0; i < 7; i++) {
+        const mid = Math.round((lo + hi) / 2);
+        const out = await encode(sharp(input).rotate(), format, mid).toBuffer();
+        if (out.byteLength > target) {
+          hi = mid - 1;
+        } else {
+          best = out;
+          lo = mid + 1;
+        }
       }
+      return { data: best, format };
     }
-    return { data: best, format };
+
+    // 2) Still too big at lowest quality → progressively downscale until it fits.
+    const w0 = meta.width ?? 0;
+    let result = smallest;
+    let factor = 1;
+    while (result.byteLength > target && factor > 0.1) {
+      factor *= 0.85;
+      const width = Math.max(64, Math.round((w0 || 1000) * factor));
+      result = await encode(sharp(input).rotate().resize({ width }), format, 10).toBuffer();
+      if (width <= 64) break;
+    }
+    return { data: result, format };
   }
 
   const data = await encode(sharp(input).rotate(), format, opts.quality ?? 70).toBuffer();

@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Admin-managed runtime content (news store + generated article HTML)
+/data/
+/public/berita/
+/public/uploads/

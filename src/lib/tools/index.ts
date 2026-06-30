@@ -4,7 +4,7 @@ import { bases } from "./base";
 import { contentEn } from "./content.en";
 import { contentId } from "./content.id";
 
-export type ToolType = "resize" | "compress" | "convert" | "crop" | "bulk";
+export type ToolType = "resize" | "compress" | "convert" | "crop" | "bulk" | "cpns";
 
 export interface FaqItem {
   q: string;

@@ -10,6 +10,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { alternatesFor, ogLocale } from "@/i18n/meta";
 import { ContentSections } from "@/components/site/content-sections";
 import { ToolIcon } from "@/components/site/icon";
+import { ShareBar } from "@/components/site/share-bar";
 
 export const dynamicParams = false;
 
@@ -145,6 +146,14 @@ export default async function ArticlePage({
           </div>
         </section>
       )}
+
+      <ShareBar
+        title={d.share.title}
+        message={d.share.message.replace("{site}", new URL(siteConfig.url).host)}
+        url={url}
+        copyLabel={d.share.copy}
+        copiedLabel={d.share.copied}
+      />
 
       <div className="mx-auto max-w-3xl px-4 pb-12 pt-2">
         <Link href={`/${locale}/blog`} className="text-sm font-medium text-primary hover:underline">

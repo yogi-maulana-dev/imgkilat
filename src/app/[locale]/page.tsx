@@ -9,7 +9,9 @@ import { ToolGrid } from "@/components/site/tool-grid";
 import { ToolApp } from "@/components/tools/tool-app";
 import { Faq } from "@/components/site/faq";
 import { ToolIcon } from "@/components/site/icon";
+import { ShareBar } from "@/components/site/share-bar";
 import { getPosts } from "@/lib/blog";
+import { siteConfig } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -62,6 +64,14 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       <Faq items={d.home.faqs} title={d.faq.title} />
+
+      <ShareBar
+        title={d.share.title}
+        message={d.share.message.replace("{site}", new URL(siteConfig.url).host)}
+        url={`${siteConfig.url}/${loc}`}
+        copyLabel={d.share.copy}
+        copiedLabel={d.share.copied}
+      />
     </>
   );
 }

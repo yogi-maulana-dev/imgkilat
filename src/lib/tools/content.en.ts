@@ -14,7 +14,7 @@ export const contentEn: Record<string, ToolContent> = {
       {
         heading: "How to resize an image",
         body: [
-          "Resizing an image means changing its width and height in pixels. With ImgKilat you can do this directly in your browser — drop a file into the upload box, type the new width or height, and download the result. There is no software to install and no account to create.",
+          "Resizing an image means changing its width and height in pixels. With ImgWus you can do this directly in your browser — drop a file into the upload box, type the new width or height, and download the result. There is no software to install and no account to create.",
           "- Upload a JPG, PNG or WebP file (up to 20 MB).",
           "- Enter the target width and height in pixels, or switch to percentage mode to scale by a ratio.",
           "- Keep the lock icon enabled to preserve the original aspect ratio so your photo never looks stretched.",
@@ -32,7 +32,7 @@ export const contentEn: Record<string, ToolContent> = {
         heading: "Why resize images?",
         body: [
           "Large images are the number one cause of slow web pages. A photo straight from a phone camera can be 4000 pixels wide and several megabytes — far larger than any website actually displays. Resizing to the real display size dramatically reduces load time, improves Core Web Vitals, and saves bandwidth for your visitors.",
-          "Resizing is also required for many practical tasks: profile pictures with a maximum dimension, marketplace listings, email attachments with size caps, and printing at a specific resolution. ImgKilat handles all of these without watermarks or limits.",
+          "Resizing is also required for many practical tasks: profile pictures with a maximum dimension, marketplace listings, email attachments with size caps, and printing at a specific resolution. ImgWus handles all of these without watermarks or limits.",
         ],
       },
       {
@@ -43,7 +43,7 @@ export const contentEn: Record<string, ToolContent> = {
       },
     ],
     faqs: [
-      { q: "Is the image resizer free?", a: "Yes. ImgKilat is completely free with no watermarks, no signup, and no usage limits for normal use." },
+      { q: "Is the image resizer free?", a: "Yes. ImgWus is completely free with no watermarks, no signup, and no usage limits for normal use." },
       { q: "Will resizing reduce the quality of my image?", a: "Making an image smaller keeps it sharp. Enlarging beyond the original resolution can add softness, which is unavoidable with any tool." },
       { q: "How do I keep the aspect ratio?", a: "Leave the lock icon enabled. When you change the width, the height updates automatically (and vice versa) so the photo never looks stretched." },
       { q: "What file formats are supported?", a: "You can resize JPG/JPEG, PNG and WebP images, and export to any of those formats." },
@@ -58,7 +58,7 @@ export const contentEn: Record<string, ToolContent> = {
       "Compress JPG, PNG and WebP images online to reduce file size while keeping good quality. Use a quality slider or set a target size. Free, fast and private.",
     keywords: ["compress image", "reduce image size", "image compressor", "compress jpg", "compress png", "reduce photo size"],
     intro:
-      "Shrink the file size of your images without an obvious drop in quality. Use the quality slider for fine control, or set a target size and let ImgKilat find the best quality that fits.",
+      "Shrink the file size of your images without an obvious drop in quality. Use the quality slider for fine control, or set a target size and let ImgWus find the best quality that fits.",
     content: [
       {
         heading: "How to compress an image",
@@ -74,7 +74,7 @@ export const contentEn: Record<string, ToolContent> = {
         heading: "Quality slider vs target size",
         body: [
           "The quality slider gives you direct, predictable control and is great when you know roughly what trade-off you want. Most photos look excellent at 70–80% quality while being a fraction of their original size.",
-          "Target-size mode is the smarter choice when a platform imposes a hard limit — an upload form that rejects files over 1 MB, for instance. ImgKilat runs a binary search across quality levels to land just under your target, so you get the best possible image at that size automatically.",
+          "Target-size mode is the smarter choice when a platform imposes a hard limit — an upload form that rejects files over 1 MB, for instance. ImgWus runs a binary search across quality levels to land just under your target, so you get the best possible image at that size automatically.",
         ],
       },
       {
@@ -107,12 +107,12 @@ export const contentEn: Record<string, ToolContent> = {
       "Reduce any photo to under 100 KB online for free. Perfect for exam forms, job applications and uploads with a 100 KB limit. Keeps the best possible quality.",
     keywords: ["resize image to 100kb", "compress image to 100kb", "photo under 100kb", "reduce image to 100kb", "100kb image"],
     intro:
-      "Need a photo under 100 KB for an online form, exam registration or job application? Upload your image and ImgKilat automatically finds the highest quality that stays below 100 KB.",
+      "Need a photo under 100 KB for an online form, exam registration or job application? Upload your image and ImgWus automatically finds the highest quality that stays below 100 KB.",
     content: [
       {
         heading: "Get your image under 100 KB instantly",
         body: [
-          "Many government portals, university exam forms and job application sites refuse photos larger than 100 KB. Doing this by hand is frustrating — you guess a quality value, export, check the size, and repeat. ImgKilat removes the guesswork.",
+          "Many government portals, university exam forms and job application sites refuse photos larger than 100 KB. Doing this by hand is frustrating — you guess a quality value, export, check the size, and repeat. ImgWus removes the guesswork.",
           "- Upload your JPG, PNG or WebP photo.",
           "- The target is pre-set to 100 KB.",
           "- The app binary-searches quality to land just under the limit while keeping the image as sharp as possible.",
@@ -184,6 +184,54 @@ export const contentEn: Record<string, ToolContent> = {
       { q: "Does it remove the background?", a: "No, this tool resizes and frames your photo. Use a plain background when taking the picture for best results." },
     ],
   },
+  "pas-foto-cpns": {
+    h1: "CPNS ID Photo (3×4, Red/Blue Background)",
+    navLabel: "CPNS Photo",
+    metaTitle: "CPNS ID Photo Online – 3×4 Size, Red/Blue Background + Suit",
+    metaDescription:
+      "Create a CPNS / ID photo online for free: resize to 3×4, automatically remove and replace the background with red or blue, and add a suit or shirt. Processed on your device — no upload.",
+    keywords: ["cpns photo", "id photo 3x4", "change photo background", "red background id photo", "passport photo suit"],
+    intro:
+      "Prepare an ID photo for civil-service (CPNS) registration in one tool: resize to 3×4, auto-replace the background with red or blue, and add a suit or shirt. Everything runs on your device — your photo is never uploaded.",
+    content: [
+      {
+        heading: "How to make the photo",
+        body: [
+          "Government job (CPNS) registration requires an ID photo with a specific background colour (usually red) and size. This tool combines all the steps.",
+          "- Upload your photo (front-facing, even lighting works best).",
+          "- The background is removed automatically — then pick a new colour: red or blue.",
+          "- Choose 3×4 (or 4×6), and adjust zoom and face position.",
+          "- Optional: add a suit or shirt and align its size and position.",
+          "- Download, and enable the ≤ 200 KB option if the form limits file size.",
+        ],
+      },
+      {
+        heading: "Red or blue background",
+        body: [
+          "The required background colour is often dictated by the agency. This tool removes the original background with an AI model that runs in your browser, then replaces it with a clean solid red or blue — no photo studio needed.",
+          "Because processing happens on-device, your photo stays private and is never sent to a server.",
+        ],
+      },
+      {
+        heading: "Add a suit or shirt",
+        body: [
+          "Not dressed formally? Add a suit or shirt overlay and drag its size and position to fit your shoulders. This is a template (not generative AI), so it is instant and free.",
+        ],
+      },
+      {
+        heading: "Print-ready, upload-ready",
+        body: [
+          "3×4 cm equals 354×472 px at 300 DPI — sharp enough to print or upload. If the portal caps file size (e.g. 200 KB), enable the compress option so the result fits automatically.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Is the background removed automatically?", a: "Yes, by an AI model running in your browser, then replaced with red or blue. The photo is not uploaded." },
+      { q: "What is 3×4 in pixels?", a: "3×4 cm at 300 DPI is 354×472 pixels. A 4×6 preset (472×709 px) is also available." },
+      { q: "Does the suit use AI?", a: "The suit/shirt is an adjustable template overlay — not generative AI — so it is free, fast and on-device." },
+      { q: "How do I keep it under 200 KB?", a: "Enable the compress option on download; the result is kept under 200 KB automatically." },
+    ],
+  },
   "jpg-to-png": {
     h1: "Convert JPG to PNG",
     navLabel: "JPG to PNG",
@@ -197,7 +245,7 @@ export const contentEn: Record<string, ToolContent> = {
       {
         heading: "How to convert JPG to PNG",
         body: [
-          "Upload your JPG file and ImgKilat re-encodes it as a PNG using lossless compression, then hands you the download. The whole process happens server-side in a single request with nothing stored afterwards.",
+          "Upload your JPG file and ImgWus re-encodes it as a PNG using lossless compression, then hands you the download. The whole process happens server-side in a single request with nothing stored afterwards.",
           "- Drop a JPG or JPEG image into the upload box.",
           "- The output format is locked to PNG.",
           "- Download your converted PNG immediately.",
@@ -414,7 +462,7 @@ export const contentEn: Record<string, ToolContent> = {
       {
         heading: "One converter, every direction",
         body: [
-          "ImgKilat converts between the three formats that matter for the modern web. Whether you need a smaller WebP for performance, a lossless PNG for editing, or a universally compatible JPG for sharing, it is a single dropdown away.",
+          "ImgWus converts between the three formats that matter for the modern web. Whether you need a smaller WebP for performance, a lossless PNG for editing, or a universally compatible JPG for sharing, it is a single dropdown away.",
           "- Upload any JPG, PNG or WebP.",
           "- Choose the output format and quality.",
           "- Download instantly — no account, no watermark.",
@@ -448,7 +496,7 @@ export const contentEn: Record<string, ToolContent> = {
       {
         heading: "How to crop an image",
         body: [
-          "Cropping removes the parts of a photo you don't want and changes its framing or aspect ratio. With ImgKilat you simply drag a box over the area to keep.",
+          "Cropping removes the parts of a photo you don't want and changes its framing or aspect ratio. With ImgWus you simply drag a box over the area to keep.",
           "- Upload a JPG, PNG or WebP image.",
           "- Drag the corners of the crop box, or pick a ratio (free, 1:1, 4:3, 16:9).",
           "- Preview the selection and download the cropped image.",

@@ -5,7 +5,7 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 
 const groupSlugs: { key: "resize" | "compress" | "convert"; slugs: string[] }[] = [
-  { key: "resize", slugs: ["resize-image", "crop-image", "passport-photo-resizer", "resize-image-to-100kb"] },
+  { key: "resize", slugs: ["pas-foto-cpns", "resize-image", "crop-image", "passport-photo-resizer", "resize-image-to-100kb"] },
   { key: "compress", slugs: ["compress-image", "bulk-image-resizer"] },
   { key: "convert", slugs: ["jpg-to-png", "png-to-jpg", "png-to-webp", "jpg-to-webp", "webp-to-jpg", "webp-to-png"] },
 ];
@@ -18,12 +18,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div>
           <p className="text-lg font-extrabold">{siteConfig.name}</p>
           <p className="mt-2 max-w-xs text-sm text-muted-foreground">{dict.site.description}</p>
-          <Link
-            href={`/${locale}/blog`}
-            className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
-          >
-            {dict.blog.nav}
-          </Link>
+          <div className="mt-3 flex gap-4">
+            <Link href={`/${locale}/blog`} className="text-sm font-medium text-primary hover:underline">
+              {dict.blog.nav}
+            </Link>
+            <Link href={`/${locale}/berita`} className="text-sm font-medium text-primary hover:underline">
+              Berita
+            </Link>
+          </div>
         </div>
         {groupSlugs.map((g) => (
           <div key={g.key}>

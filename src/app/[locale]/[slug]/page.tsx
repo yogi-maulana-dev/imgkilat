@@ -13,6 +13,7 @@ import { Faq } from "@/components/site/faq";
 import { ToolRenderer } from "@/components/tools/tool-renderer";
 import { ToolJsonLd } from "@/components/seo/json-ld";
 import { ToolIcon } from "@/components/site/icon";
+import { ShareBar } from "@/components/site/share-bar";
 
 export const dynamicParams = false;
 
@@ -73,7 +74,15 @@ export default async function ToolPageRoute({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-8">
-        <ToolRenderer type={tool.type} preset={tool.preset} dict={d.tool} dropzone={d.dropzone} />
+        <ToolRenderer
+          type={tool.type}
+          preset={tool.preset}
+          dict={d.tool}
+          dropzone={d.dropzone}
+          cpns={d.cpns}
+          shareMessage={d.share.message.replace("{site}", new URL(siteConfig.url).host)}
+          shareUrl={`${siteConfig.url}/${locale}/${tool.slug}`}
+        />
       </section>
 
       <ContentSections sections={tool.content} />
@@ -96,6 +105,14 @@ export default async function ToolPageRoute({
           ))}
         </div>
       </section>
+
+      <ShareBar
+        title={d.share.title}
+        message={d.share.message.replace("{site}", new URL(siteConfig.url).host)}
+        url={`${siteConfig.url}/${locale}/${tool.slug}`}
+        copyLabel={d.share.copy}
+        copiedLabel={d.share.copied}
+      />
 
       <Faq items={tool.faqs} title={d.faq.title} />
     </>

@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "ImgKilat",
+  name: "ImgWus",
   tagline: "Resize, Compress & Convert Images Online",
   description:
     "Free online image tools to resize, compress, convert and crop your JPG, PNG and WebP images. Fast, private and processed securely — no signup required.",
   // Change this to your production domain.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://imgkilat.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://imgwus.com",
   locale: "en_US",
   twitter: "@imgkilat",
   // Hard limits used across UI + API for validation.

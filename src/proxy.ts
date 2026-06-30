@@ -41,8 +41,11 @@ export async function proxy(req: NextRequest) {
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
+    pathname.startsWith("/berita") ||
+    pathname.startsWith("/uploads") ||
     pathname === "/robots.txt" ||
     pathname === "/sitemap.xml" ||
+    pathname === "/news-sitemap.xml" ||
     pathname === "/favicon.ico" ||
     PUBLIC_FILE.test(pathname)
   ) {
