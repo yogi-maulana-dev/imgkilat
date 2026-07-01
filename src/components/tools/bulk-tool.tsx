@@ -120,7 +120,7 @@ export function BulkTool({
             <div>
               <Label>{dict.outputFormat}</Label>
               <Select value={format} onChange={(e) => setFormat(e.target.value as OutputFormat)} className="mt-1.5">
-                <option value="jpeg">JPG</option>
+                <option value="jpeg">JPG / JPEG</option>
                 <option value="png">PNG</option>
                 <option value="webp">WebP</option>
               </Select>
