@@ -1,26 +1,31 @@
 import { siteConfig, type AcceptedMime } from "./site";
 
-const MAGIC: Record<AcceptedMime, number[][]> = {
-  "image/jpeg": [[0xff, 0xd8, 0xff]],
-  "image/png": [[0x89, 0x50, 0x4e, 0x47]],
-  "image/webp": [[0x52, 0x49, 0x46, 0x46]], // "RIFF" (WEBP at offset 8)
-};
-
 export type ValidationError = { ok: false; status: number; message: string };
 export type ValidationOk = { ok: true; mime: AcceptedMime; buffer: Buffer };
 
+/** Detect the real format from the file's magic bytes (source of truth). */
+function detectMime(b: Buffer): AcceptedMime | null {
+  if (b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff) return "image/jpeg"; // JPG/JPEG
+  if (b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4e && b[3] === 0x47) return "image/png";
+  if (
+    b[0] === 0x52 && b[1] === 0x49 && b[2] === 0x46 && b[3] === 0x46 && // "RIFF"
+    b[8] === 0x57 && b[9] === 0x45 && b[10] === 0x42 && b[11] === 0x50 // "WEBP"
+  ) {
+    return "image/webp";
+  }
+  return null;
+}
+
 /**
- * Validate an uploaded file: enforce accepted MIME, size limit, and verify the
- * real file signature (magic bytes) so a renamed/forged extension is rejected.
+ * Validate an uploaded image. We trust the actual file content (magic bytes)
+ * rather than the declared MIME, so .jpeg / .jpg files — and files with a
+ * missing or non-standard MIME type — are accepted as long as the bytes are a
+ * real JPEG, PNG or WebP.
  */
 export async function validateImage(
   file: File | null,
 ): Promise<ValidationError | ValidationOk> {
   if (!file) return { ok: false, status: 400, message: "No file uploaded." };
-
-  if (!siteConfig.acceptedMime.includes(file.type as AcceptedMime)) {
-    return { ok: false, status: 415, message: `Unsupported type: ${file.type || "unknown"}.` };
-  }
 
   if (file.size > siteConfig.maxFileSize) {
     return {
@@ -31,12 +36,9 @@ export async function validateImage(
   }
 
   const buffer = Buffer.from(await file.arrayBuffer());
-  const mime = file.type as AcceptedMime;
-  const signatures = MAGIC[mime];
-  const valid = signatures.some((sig) => sig.every((byte, i) => buffer[i] === byte));
-
-  if (!valid) {
-    return { ok: false, status: 422, message: "File content does not match its type." };
+  const mime = detectMime(buffer);
+  if (!mime) {
+    return { ok: false, status: 415, message: "Unsupported or corrupt image. Use JPG, JPEG, PNG or WebP." };
   }
 
   return { ok: true, mime, buffer };

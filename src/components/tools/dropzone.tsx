@@ -22,7 +22,11 @@ export function Dropzone({
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     multiple,
-    accept: { "image/jpeg": [], "image/png": [], "image/webp": [] },
+    accept: {
+      "image/jpeg": [".jpg", ".jpeg", ".jpe"],
+      "image/png": [".png"],
+      "image/webp": [".webp"],
+    },
     maxSize: siteConfig.maxFileSize,
   });
 
